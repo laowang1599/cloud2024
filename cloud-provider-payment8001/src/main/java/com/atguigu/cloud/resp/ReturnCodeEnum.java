@@ -7,6 +7,7 @@ import java.util.Arrays;
 @Getter
 public enum ReturnCodeEnum
 {
+    //1.举值
     /**操作失败**/
     RC999("999","操作XXX失败"),
     /**操作成功**/
@@ -35,6 +36,8 @@ public enum ReturnCodeEnum
     BUSINESS_ERROR("1004","业务逻辑异常"),
     UNSUPPORTED_GRANT_TYPE("1003", "不支持的认证模式");
 
+
+    //2.构造
     /**自定义状态码**/
     private final String code;
     /**自定义描述**/
@@ -45,6 +48,8 @@ public enum ReturnCodeEnum
         this.message = message;
     }
 
+
+    //3.遍历
     //遍历枚举V1
     public static ReturnCodeEnum getReturnCodeEnum(String code)
     {
@@ -56,6 +61,7 @@ public enum ReturnCodeEnum
         }
         return null;
     }
+
     //遍历枚举V2
     public static ReturnCodeEnum getReturnCodeEnumV2(String code)
     {
