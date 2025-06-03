@@ -54,4 +54,11 @@ public class OrderController {
         restTemplate.put(PaymentSrv_URL + "/pay/update", payDTO);
         return ResultData.success("修改成功");
     }
+
+    @GetMapping(value = "/consumer/pay/get/info")
+    private String getInfoByConsul()
+    {
+        return restTemplate.getForObject(PaymentSrv_URL + "/pay/get/info", String.class);
+    }
+
 }
